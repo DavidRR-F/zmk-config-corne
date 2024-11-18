@@ -32,7 +32,7 @@
                 #binding-cells = <2>;
                 hold-trigger-ms = <200>; // Adjust this to suit your preference
                 tapping-term-ms = <150>; // Adjust this to suit your preference
-                bindings = <&sticky RAISE>, <&kp LCTRL>; // Replace `0` with your layer index
+                bindings = <&sl RAISE>, <&kp LCTRL>; // Replace `0` with your layer index
             };
         };
 
