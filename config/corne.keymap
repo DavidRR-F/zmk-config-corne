@@ -17,24 +17,24 @@
 / {
         combos {
             compatible = "zmk,combos";
-            jk_to_esc_combo {
-                timeout-ms = <50>; // Adjust timing as needed
-                key-positions = <1 7 1 8>; // Replace X and Y with the key positions of J and K
+            combo_esc {
+                timeout-ms = <50>; 
+                key-positions = <19 20>; 
                 bindings = <&kp ESC>;
                 layers = <0>;
             };
         };
 
-        behaviors {
-            mod_tap_sticky_layer: behavior {
-                compatible = "zmk,behavior-tap-hold";
-                label = "MOD_TAP_STICKY_LAYER";
-                #binding-cells = <2>;
-                hold-trigger-ms = <200>; 
-                tapping-term-ms = <150>;
-                bindings = <&sl RAISE>, <&kp LCTRL>; 
-            };
-        };
+        //behaviors {
+        //    mod_tap_sticky_layer: behavior {
+        //        compatible = "zmk,behavior-tap-hold";
+        //        label = "MOD_TAP_STICKY_LAYER";
+        //        #binding-cells = <2>;
+        //        hold-trigger-ms = <200>; 
+        //        tapping-term-ms = <150>;
+        //        bindings = <&sl RAISE>, <&kp LCTRL>; 
+        //    };
+        //};
 
         keymap {
                 compatible = "zmk,keymap";
@@ -48,7 +48,7 @@
                         bindings = <
    &kp TAB                &kp Q    &kp W &kp E &kp R &kp T        &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
    &kp ESC                &kp A    &kp S &kp D &kp F &kp G        &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-   &mod_tap_sticky_layer  &kp Z    &kp X &kp C &kp V &kp B        &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &mt RSHFT CAPS
+   &kp LSHFT  &kp Z    &kp X &kp C &kp V &kp B        &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &mt RSHFT CAPS
                           &kp LGUI &kp LCTRL &lt LOWER SPACE      &lt RAISE RET &kp RALT &mo FN
                         >;
                 };
