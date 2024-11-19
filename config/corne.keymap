@@ -12,12 +12,9 @@
 #define RAISE   2
 #define FN      3
 
-&sl {
-    release-after-ms = <70>;
-};
-
 &lt {
-    tapping-term-ms = <70>;
+    tapping-term-ms = <200>;
+    flavor = "hold-preferred";
 };
 
 / {
@@ -27,7 +24,7 @@
               label = "mo_sl";
               #binding-cells = <2>;
               flavor = "hold-preferred";
-              tapping-term-ms = <70>;
+              tapping-term-ms = <200>;
               bindings = <&kp>, <&sl>;
           };
         };
