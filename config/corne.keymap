@@ -13,11 +13,11 @@
 #define FN      3
 
 &sl {
-    release-after-ms = <100>;
+    release-after-ms = <70>;
 };
 
 &lt {
-    tapping-term-ms = <100>;
+    tapping-term-ms = <70>;
 };
 
 / {
@@ -27,9 +27,19 @@
               label = "mo_sl";
               #binding-cells = <2>;
               flavor = "hold-preferred";
-              tapping-term-ms = <200>;
+              tapping-term-ms = <70>;
               bindings = <&kp>, <&sl>;
           };
+        };
+
+        combos {
+            compatible = "zmk,combos";
+            combo_esc {
+                timeout-ms = <70>; 
+                key-positions = <19 20>; 
+                bindings = <&kp ESC>;
+                layers = <0>;
+            };
         };
 
         keymap {
@@ -44,7 +54,7 @@
                         bindings = <
    &kp TAB                &kp Q    &kp W &kp E &kp R &kp T        &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
    &kp ESC                &kp A    &kp S &kp D &kp F &kp G        &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-   &kp_sl LSHFT RAISE     &kp Z    &kp X &kp C &kp V &kp B        &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &mt RSHFT CAPS 
+   &kp_sl LSHFT RAISE     &kp Z    &kp X &kp C &kp V &kp B        &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp RSHFT
                           &kp LGUI &kp LCTRL &lt LOWER SPACE      &lt RAISE RET &kp RALT &mo FN 
                         >;
                 };
