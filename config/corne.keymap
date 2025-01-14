@@ -57,8 +57,8 @@
                 raise_layer {
                         bindings = <
    &kp  F1   &kp F2   &kp F3         &kp F4       &kp F5         &kp F6       &kp F7   &kp F8   &kp F9  &kp F10      &kp F11              &kp F12
-   &none     &none    &none          &BT_NEXT     &kp C_VOL_UP   &none        &kp LEFT &kp DOWN &kp UP  &kp RIGHT    &none   &none
-   &none     &none    &BT_CLR    &BT_PREV     &kp C_VOL_DN   &kp C_MUTE       &none &none &none &none &none &none
+   &none     &none    &none          &none     &none   &none        &kp LEFT &kp DOWN &kp UP  &kp RIGHT    &none   &none
+   &none     &none    &none    &none     &none   &none       &none &none &none &none &none &none
                                    &trans &trans   &kp SPACE                  &kp RET   &trans    &trans
                         >;
                 };
