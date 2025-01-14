@@ -25,7 +25,7 @@
 &caps_word {
     continue-list = <UNDERSCORE>;
     mods = <(MOD_LSFT)>;
-}
+};
 
 / {
 
