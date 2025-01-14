@@ -41,7 +41,7 @@
                 timeout-ms = <70>; 
                 key-positions = <19 20 21 22>; 
                 bindings = <&tog GAME>;
-                layers = <0>;
+                layers = <0 3>;
             };
         };
 
@@ -80,7 +80,7 @@
         &kp TAB  &kp Q         &kp W       &kp E      &kp R      &kp T        &kp Y  &kp U       &kp I      &kp O       &kp P          &kp BSPC
         &kp M &kp A  &kp S &kp D &kp F &kp G        &kp H  &mt RGUI J  &mt RALT K &mt RCTRL L &mt RSHFT SEMI &kp SQT
         &kp LSHFT  &kp Z         &kp X       &kp C      &kp V      &kp B        &kp N  &kp M       &kp COMMA  &kp DOT     &kp FSLH       &kp RSHFT
-                                 &kp LALT &kp LCTRL &kp SPACE        &kp RET &kp RCTRL &kp RALT 
+                                 &kp LGUI &kp LCTRL &kp SPACE        &kp RET &kp RCTRL &kp RALT 
                         >;
                 };
         };
