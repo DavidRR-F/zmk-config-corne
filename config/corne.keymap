@@ -24,7 +24,7 @@
 
 &caps_word {
     continue-list = <UNDERSCORE LSHFT>;
-    mods = <(MOD_SHFT)>;
+    mods = <(MOD_LSFT)>;
 };
 
 / {
