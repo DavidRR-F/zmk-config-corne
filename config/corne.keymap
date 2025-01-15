@@ -23,7 +23,8 @@
 };
 
 &caps_word {
-    continue-list = <UNDERSCORE>;
+    continue-list = <UNDERSCORE LSHFT>;
+    mods = <(MOD_SHFT)>;
 };
 
 / {
