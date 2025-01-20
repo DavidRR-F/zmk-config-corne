@@ -23,7 +23,7 @@
 };
 
 &caps_word {
-    continue-list = <UNDERSCORE LSHFT>;
+    continue-list = <UNDERSCORE LSHFT MINUS BACKSPACE>;
     mods = <(MOD_LSFT)>;
 };
 
@@ -32,7 +32,7 @@
         combos {
             compatible = "zmk,combos";
             combo_esc {
-                timeout-ms = <70>; 
+                timeout-ms = <100>; 
                 key-positions = <19 20>; 
                 bindings = <&kp ESC>;
                 layers = <0>;
@@ -53,7 +53,7 @@
         &kp GRAVE  &kp Q         &kp W       &kp E      &kp R      &kp T        &kp Y  &kp U       &kp I      &kp O       &kp P          &kp BSLH
         &caps_word &mt LSHIFT A  &mt LCTRL S &mt LALT D &mt LGUI F &kp G        &kp H  &mt RGUI J  &mt RALT K &mt RCTRL L &mt RSHFT SEMI &kp SQT
         &kp MINUS  &kp Z         &kp X       &kp C      &kp V      &kp B        &kp N  &kp M       &kp COMMA  &kp DOT     &kp FSLH       &kp EQUAL
-                                 &sl LOWER &lt RAISE TAB &lt LOWER SPACE        &lt LOWER RET &kp BSPC &sl LOWER  
+                                 &kp LBRC RAISE TAB &lt LOWER SPACE        &lt LOWER RET &kp BSPC &kp LBRC 
                         >;
                 };
 
@@ -77,10 +77,10 @@
 
                 game_layer {
                         bindings = <
-        &kp TAB  &kp Q         &kp W       &kp E      &kp R      &kp T        &kp Y  &kp U       &kp I      &kp O       &kp P          &kp BSPC
-        &kp M &kp A  &kp S &kp D &kp F &kp G        &kp H  &mt RGUI J  &mt RALT K &mt RCTRL L &mt RSHFT SEMI &kp SQT
-        &kp LSHFT  &kp Z         &kp X       &kp C      &kp V      &kp B        &kp N  &kp M       &kp COMMA  &kp DOT     &kp FSLH       &kp RSHFT
-                                 &kp LGUI &kp LCTRL &kp SPACE        &kp RET &kp RCTRL &kp RALT 
+        &kp GRAVE  &kp Q         &kp W       &kp E      &kp R      &kp T        &kp Y  &kp U       &kp I      &kp O       &kp P          &kp BSLH
+        &kp m &kp A  &kp S &kp D &kp F &kp G        &kp H  &kp J  &kp K &kp L &kp SEMI &kp SQT
+        &kp MINUS  &kp Z         &kp X       &kp C      &kp V      &kp B        &kp N  &kp M       &kp COMMA  &kp DOT     &kp FSLH       &kp EQUAL
+                                 &kp LBRC RAISE TAB &kp SPACE        &kp RET &kp BSPC &kp LBRC 
                         >;
                 };
         };
