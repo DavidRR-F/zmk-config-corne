@@ -38,6 +38,12 @@
                 bindings = <&kp ESC>;
                 layers = <0>;
             };
+            combo_tmux {
+                timeout-ms = <100>; 
+                key-positions = <14 15>; 
+                bindings = <&kp LC(t)>;
+                layers = <0>;
+            };
             combo_game_mode {
                 timeout-ms = <70>; 
                 key-positions = <19 20 21 22>; 
