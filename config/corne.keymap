@@ -38,8 +38,8 @@
                 layers = <0>;
             };
             combo_tmux {
-                timeout-ms = <100>; 
-                key-positions = <14 15>; 
+                timeout-ms = <70>; 
+                key-positions = <15 16>; 
                 bindings = <&kp LC(T)>;
                 layers = <0>;
             };
