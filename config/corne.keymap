@@ -32,7 +32,7 @@
         behaviors {
             tt: tmux_tap {
                 compatible = "zmk,behavior-tap-dance";
-                #binding-cells = <22>;
+                #binding-cells = <0>;
                 tapping-term-ms = <100>;
                 bindings = <&kp SEMI>, <&kp LC(T)>;
             };
