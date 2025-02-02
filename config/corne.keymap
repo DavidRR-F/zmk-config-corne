@@ -30,12 +30,19 @@
 
 / {
         behaviors {
-            tt: tmux_tap {
+            td_semi_prefix: td_semi_prefix {
                 compatible = "zmk,behavior-tap-dance";
                 #binding-cells = <0>;
-                tapping-term-ms = <100>;
-                bindings = <&mt RSHIFT SEMI>, <&kp LC(T)>;
+                tapping-term-ms = <200>;
+                bindings = <&kp SEMI>, <&kp LC(T)>;
             };
+            mtd_kp_semi_prefix: mtd_kp_semi_prefix {
+                compatible = "zmk,behavior-hold-tap";
+                #binding-cells = <2>;
+                flavor = "tap-preferred";
+                quick-tap-ms = <200>;
+                bindings = <&kp>, <&td_semi_prefix>;
+            }
         };
         combos {
             compatible = "zmk,combos";
@@ -59,7 +66,7 @@
                 default_layer {
                         bindings = <
         &kp GRAVE  &kp Q         &kp W       &kp E      &kp R      &kp T        &kp Y  &kp U       &kp I      &kp O       &kp P          &kp BSLH
-        &caps_word &mt LSHIFT A  &mt LCTRL S &mt LALT D &mt LGUI F &kp G        &kp H  &mt RGUI J  &mt RALT K &mt RCTRL L &tt &kp SQT
+        &caps_word &mt LSHIFT A  &mt LCTRL S &mt LALT D &mt LGUI F &kp G        &kp H  &mt RGUI J  &mt RALT K &mt RCTRL L &mtd_kp_semi_prefix RSHIFT 0    &kp SQT
         &kp MINUS  &kp Z         &kp X       &kp C      &kp V      &kp B        &kp N  &kp M       &kp COMMA  &kp DOT     &kp FSLH       &kp EQUAL
                                  &kp LBKT &lt RAISE TAB &lt LOWER SPACE        &lt LOWER RET &kp BSPC &kp RBKT
                         >;
