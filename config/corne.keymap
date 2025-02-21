@@ -12,6 +12,7 @@
 #define LOWER   1
 #define RAISE   2
 #define GAME    3
+#define MOUSE   4
 
 &lt {
     tapping-term-ms = <200>;
@@ -51,7 +52,7 @@
                 default_layer {
                         bindings = <
         &kp LBKT  &kp Q         &kp W       &kp E      &kp R      &kp T        &kp Y  &kp U       &kp I      &kp O       &kp P          &kp RBKT
-        &caps_word &mt LGUI A  &mt LALT S &mt LCTRL D &mt LSHIFT F &kp G        &kp H  &mt RSHIFT J  &mt RCTRL K &mt RALT L &mt RGUI SEMI   &kp SQT
+        &caps_word &mt LGUI A  &mt LALT S &mt LCTRL D &mt LSHIFT F &lt MOUSE G        &kp H  &mt RSHIFT J  &mt RCTRL K &mt RALT L &mt RGUI SEMI   &kp SQT
         &kp MINUS  &kp Z         &kp X       &kp C      &kp V      &kp B        &kp N  &kp M       &kp COMMA  &kp DOT     &kp FSLH       &kp EQUAL
                                  &kp GRAVE &lt RAISE TAB &lt LOWER SPACE        &lt LOWER RET &kp BSPC &kp BSLH
                         >;
@@ -60,7 +61,7 @@
                 lower_layer {
                         bindings = <
    &trans     &kp EXCL &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS &kp ASTRK &kp LPAR  &kp RPAR  &trans
-   &trans     &kp N1   &kp N2  &kp N3    &kp N4    &kp N5       &kp N6     &kp N7   &kp N8    &kp N9    &kp N0    &trans
+   &kp SPACE     &mt LGUI N1   &mt LALT N2  &mt LCRTL N3    &mt LSHIFT N4    &kp N5       &mt RSHIFT N6     &mt RCTRL N7   &mt RALT N8    &mt RGUI N9    &kp N0    &trans
    &trans     &none    &none   &none     &kp LBRC  &kp LBKT     &kp RBKT   &kp RBRC &trans    &trans    &trans    &trans
                             &kp RAISE    &trans    &kp SPACE    &kp RET  &trans  &sl RAISE
                         >;
@@ -69,8 +70,8 @@
                 raise_layer {
                         bindings = <
    &kp  F1   &kp F2   &kp F3         &kp F4       &kp F5  &kp F6           &kp F7   &kp F8   &kp F9  &kp F10      &kp F11 &kp F12
-   &none     &none    &none          &msc SCRL_UP        &mkp LCLK   &kp LCAPS        &kp LEFT &kp DOWN &kp UP  &kp RIGHT    &none   &none
-   &none     &none    &none          &msc SCRL_DOWN        &mkp RCLK   &mkp MCLK           &bt BT_NXT    &bt BT_PRV    &bt BT_CLR    &bt BT_CLR_ALL       &none   &none
+   &none     &none    &none          &none        &none   &none        &kp LEFT &kp DOWN &kp UP  &kp RIGHT    &kp LCAPS   &none
+   &none     &none    &none          &none       &none   &none           &bt BT_NXT    &bt BT_PRV    &bt BT_CLR    &bt BT_CLR_ALL       &none   &none
                                       &trans &trans   &kp SPACE            &kp RET   &trans    &trans
                         >;
                 };
@@ -81,6 +82,15 @@
         &kp M      &kp A         &kp S       &kp D      &kp F      &kp G        &kp H  &kp J       &kp K      &kp L       &kp SEMI       &kp SQT
         &kp MINUS  &kp Z         &kp X       &kp C      &kp V      &kp B        &kp N  &kp M       &kp COMMA  &kp DOT     &kp FSLH       &kp EQUAL
                                               &trans &kp TAB &kp SPACE        &kp RET &kp BSPC &trans
+                        >;
+                };
+
+                mouse_layer {
+                        bindings = <
+        &none    &none         &none       &none      &none      &none        &none  &none       &mmv MOVE_UP      &none       &none          &msc SCRL_UP
+        &none      &none         &none       &none      &none      &none        &none &mmv MOVE_LEFT       &mmv MOVE_DOWN      &mmv MOVE_RIGHT       &msc SCRL_DOWN       &none
+        &none  &none         &none       &none      &none      &none        &none  &none       &none  &none     &none       &none
+                                              &none &none &none        &mkp RCLK &mkp LCLK &mkp MCLK
                         >;
                 };
         };
